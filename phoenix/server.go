@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ehazlett/phoenix"
-	"github.com/ehazlett/phoenix/plugins"
+	"github.com/booyaa/phoenix"
+	"github.com/booyaa/phoenix/plugins"
 	"github.com/gorilla/mux"
 )
 

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/ehazlett/phoenix"
+	"github.com/booyaa/phoenix"
 )
 
 var (

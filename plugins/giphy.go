@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/ehazlett/phoenix"
+	"github.com/booyaa/phoenix"
 )
 
 var (

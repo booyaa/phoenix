@@ -3,7 +3,7 @@ package plugins
 import (
 	"encoding/base64"
 
-	"github.com/ehazlett/phoenix"
+	"github.com/booyaa/phoenix"
 )
 
 type (

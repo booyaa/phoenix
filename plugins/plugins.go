@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/ehazlett/phoenix"
+	"github.com/booyaa/phoenix"
 )
 
 var (
@@ -42,6 +42,7 @@ func New(enabledPlugins []string) *Manager {
 	plugins["statusboard"] = StatusBoard()
 	plugins["weather"] = Weather()
 	plugins["manpage"] = Manpage()
+	plugins["ping"] = Ping()
 	// manager
 	manager := &Manager{
 		plugins:        plugins,

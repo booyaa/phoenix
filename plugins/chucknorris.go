@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/ehazlett/phoenix"
+	"github.com/booyaa/phoenix"
 )
 
 var (

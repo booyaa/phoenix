@@ -9,7 +9,8 @@ import (
 	"strings"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/ehazlett/phoenix/plugins"
+	// "github.com/ehazlett/phoenix/plugins"
+	"github.com/booyaa/phoenix/plugins"
 )
 
 var (

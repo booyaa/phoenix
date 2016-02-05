@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/ehazlett/phoenix"
+	"github.com/booyaa/phoenix"
 )
 
 type (
