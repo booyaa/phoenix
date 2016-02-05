@@ -1,6 +1,7 @@
 package plugins
 
 import (
+	"fmt"
 	"github.com/Sirupsen/logrus"
 	"github.com/booyaa/phoenix"
 )
@@ -52,5 +53,11 @@ func (plugin PingPlugin) Handle(message *phoenix.Message) (string, error) {
 		"text":        message.Text,
 		"triggerWord": message.TriggerWord,
 	}).Info("Ping Handler")
-	return "pong", nil
+
+	host := message.Text
+	if host == "" {
+		return "provide a host", nil
+	}
+
+	return fmt.Sprintf("pinging %s", host), nil
 }
