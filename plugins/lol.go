@@ -20,7 +20,7 @@ type (
 func Lol() Plugin {
 	plugin := LolPlugin{
 		name:        "lol",
-		version:     "0.0",
+		version:     "0.1",
 		author:      "booyaa",
 		description: "lol tool",
 	}
@@ -67,7 +67,6 @@ func (plugin LolPlugin) Handle(message *phoenix.Message) (string, error) {
 		output = fmt.Sprintf("Error parsing  %s %v", data, err)
 	}
 
-	// output = fmt.Sprintf("executing... %s %s", command, args)
 	output = executeCommand(command, args)
 
 	return output, nil
@@ -84,13 +83,15 @@ func parseCommand(message string) (string, string, error) {
 	return command, args, nil
 }
 
+// here be dragons
 func executeCommand(command string, args string) (output string) {
 	var result []byte
 	var err error
+	prefix := "x/bin/" // keep this in, until /you/ understand the ramifications of using exec...
 	if args == "" {
-		result, err = exec.Command(command).CombinedOutput()
+		result, err = exec.Command(prefix + command).CombinedOutput()
 	} else {
-		result, err = exec.Command(command, args).CombinedOutput()
+		result, err = exec.Command(prefix+command, args).CombinedOutput()
 	}
 	output = string(result)
 
